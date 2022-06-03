@@ -1,9 +1,7 @@
 
-import pandas as pd
 import numpy as np
 
 from tqdm.auto import tqdm
-from consts import *
 import torch
 from transformers import BertTokenizerFast as BertTokenizer
 import pytorch_lightning as pl
@@ -12,6 +10,8 @@ from sklearn.metrics import classification_report
 
 from model.sentiment_tagger import SentimentTagger
 from model.sentiment_dataset import SentimentDataset
+from consts import *
+
 
 pl.seed_everything(RANDOM_SEED)
 

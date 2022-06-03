@@ -1,23 +1,20 @@
 import pandas as pd
 import numpy as np
-
 from tqdm.auto import tqdm
 
-from consts import  *
 import torch
-from sentiment_dataset import SentimentDataModule,SentimentDataset
-from sentiment_tagger import SentimentTagger
-
 import pytorch_lightning as pl
-
 from transformers import BertTokenizerFast as BertTokenizer
-
 from pytorch_lightning.metrics.functional import accuracy, auroc
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 from pytorch_lightning.loggers import TensorBoardLogger
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
+
+from model.sentiment_dataset import SentimentDataModule,SentimentDataset
+from model.sentiment_tagger import SentimentTagger
+from consts import  *
 
 pl.seed_everything(RANDOM_SEED)
 
@@ -39,7 +36,6 @@ def read_xy(filename):
     for col in label_cols:
         f[col] = f[col].apply(func)
     return f
-
 
 df = read_xy(DATA_PATH + '/trainingset/sentiment_analysis_trainingset.csv')
 test_df = read_xy(

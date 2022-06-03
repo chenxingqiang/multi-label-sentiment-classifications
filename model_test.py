@@ -1,10 +1,10 @@
 
 import pandas as pd
-from consts import *
 import torch
 
 from transformers import BertTokenizerFast as BertTokenizer
-from sentiment_tagger import SentimentTagger    
+from model.sentiment_tagger import SentimentTagger    
+from consts import *
 
 test_comments = pd.read_csv(
     DATA_PATH + '/testset/test.txt').values.tolist()
