@@ -11,6 +11,7 @@ from sklearn.metrics import classification_report
 from model.sentiment_tagger import SentimentTagger
 from model.sentiment_dataset import SentimentDataset
 from consts import *
+from consts import read_xy
 
 
 pl.seed_everything(RANDOM_SEED)

@@ -38,8 +38,6 @@ DATA_PATH = ROOT + DATASET
 
 THRESHOLD = 0.5
 
-
-
 def func(x):
     if x == -2:
         return [1, 0, 0, 0]

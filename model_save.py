@@ -4,7 +4,6 @@ import torch
 from transformers import BertTokenizerFast as BertTokenizer
 from model.sentiment_tagger import SentimentTagger
 
-
 BERT_MODEL_NAME = 'bert-base-chinese'
 tokenizer = BertTokenizer.from_pretrained(BERT_MODEL_NAME)
 

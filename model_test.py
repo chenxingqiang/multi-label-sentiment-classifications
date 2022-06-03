@@ -9,9 +9,7 @@ from consts import *
 test_comments = pd.read_csv(
     DATA_PATH + '/testset/test.txt').values.tolist()
 
-
 tokenizer = BertTokenizer.from_pretrained(BERT_MODEL_NAME)
-
 
 trained_model = SentimentTagger.load_from_checkpoint("./checkpoints/best-checkpoint-v17.ckpt", n_classes=80)
 trained_model.eval()
@@ -19,7 +17,6 @@ trained_model.freeze()
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 trained_model = trained_model.to(device)
-
 
 results = []
 for test_comment in test_comments:

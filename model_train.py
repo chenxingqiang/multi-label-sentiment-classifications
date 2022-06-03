@@ -14,28 +14,11 @@ from sklearn.metrics import classification_report
 
 from model.sentiment_dataset import SentimentDataModule,SentimentDataset
 from model.sentiment_tagger import SentimentTagger
-from consts import  *
+from consts import  * 
+from consts import read_xy
 
 pl.seed_everything(RANDOM_SEED)
 
-
-def func(x):
-    if x == -2:
-        return [1, 0, 0, 0]
-    if x == -1:
-        return [0, 1, 0, 0]
-    if x == 0:
-        return [0, 0, 1, 0]
-    if x == 1:
-        return [0, 0, 0, 1]
-
-
-def read_xy(filename):
-    f = pd.read_csv(filename, encoding="utf-8", sep=",").iloc[0:1000, :]
-    label_cols = f.columns.tolist()[2:]
-    for col in label_cols:
-        f[col] = f[col].apply(func)
-    return f
 
 df = read_xy(DATA_PATH + '/trainingset/sentiment_analysis_trainingset.csv')
 test_df = read_xy(
