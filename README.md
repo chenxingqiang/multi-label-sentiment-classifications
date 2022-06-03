@@ -1,3 +1,13 @@
+## 数据集
+[训练数据](https://pan.baidu.com/s/1BBWLsiA-xVIQcFD7gOjEMw?pwd=p8db)  提取码: p8db
+
+[验证数据](https://pan.baidu.com/s/13W-pj6KUOkcc7HG2LfUgDQ?pwd=45tw)  提取码: 45tw
+
+[测试集](https://pan.baidu.com/s/1eZuFvdvuVB8LrAFUbHulPw?pwd=elui)  提取码: elui
+
+[已训练模型文件: best checkpoint](https://pan.baidu.com/s/1Hb2Kujr_vjp-hWQGcIUotw?pwd=6a7j) 提取码: 6a7j
+
+## 验证集上效果 所有分类标签的准确度
 
 |tag-name|class|accuracy|
 |:----|:----:|----:|
@@ -83,7 +93,7 @@
 |others_willing_to_consume_again|1|0.9430780410766602|
 
 
-
+## 分类报告
 |tag-name|class|precision|recall|f1-score|support|
 |:----|:----:|:----|:----|:----|:----|
 |location_traffic_convenience|-2|0.97|0.97|0.97|11757|
