@@ -1,6 +1,6 @@
 
 |tag-name|class|accuracy|
-|----|----:|:----|
+|:----|:----:|----:|
 |location_traffic_convenience|-2|0.9779578447341919|
 |location_traffic_convenience|-1|0.9644047021865845|
 |location_traffic_convenience|0|0.8011305332183838|
@@ -85,7 +85,7 @@
 
 
 |tag-name|class|precision|recall|f1-score|support|
-|----|----|----|----|----|----|
+|:----|:----:|:----|:----|:----|:----|
 |location_traffic_convenience|-2|0.97|0.97|0.97|11757|
 |location_traffic_convenience|-1|0.77|0.32|0.46|182|
 |location_traffic_convenience|0|0.00|0.00|0.00|136|
