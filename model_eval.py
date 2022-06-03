@@ -10,19 +10,11 @@ import pytorch_lightning as pl
 from pytorch_lightning.metrics.functional import accuracy, auroc
 from sklearn.metrics import classification_report
 
-from sentiment_tagger import SentimentTagger
-from sentiment_dataset import SentimentDataset
+from model.sentiment_tagger import SentimentTagger
+from model.sentiment_dataset import SentimentDataset
 
 pl.seed_everything(RANDOM_SEED)
 
-
-
-def read_xy(filename):
-    f = pd.read_csv(filename, encoding="utf-8", sep=",").iloc[0:1000, :]
-    LABEL_COLUMNS = f.columns.tolist()[2:]
-    for col in LABEL_COLUMNS:
-        f[col] = f[col].apply(func)
-    return f
 
 test_df = read_xy(
     DATA_PATH + '/validationset/sentiment_analysis_validationset.csv')

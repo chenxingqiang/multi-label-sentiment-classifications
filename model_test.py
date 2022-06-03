@@ -13,7 +13,7 @@ test_comments = pd.read_csv(
 tokenizer = BertTokenizer.from_pretrained(BERT_MODEL_NAME)
 
 
-trained_model = SentimentTagger.load_from_checkpoint("/root/checkpoints/best-checkpoint-v17.ckpt", n_classes=80)
+trained_model = SentimentTagger.load_from_checkpoint("./checkpoints/best-checkpoint-v17.ckpt", n_classes=80)
 trained_model.eval()
 trained_model.freeze()
 

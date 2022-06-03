@@ -1,3 +1,5 @@
+import pandas as pd
+
 LABEL_COLUMNS = ["location_traffic_convenience",
                  "location_distance_from_business_district",
                  "location_easy_to_find",
@@ -48,4 +50,10 @@ def func(x):
     if x == 1:
         return [0, 0, 0, 1]
 
+def read_xy(filename):
+    f = pd.read_csv(filename, encoding="utf-8", sep=",").iloc[0:1000, :]
+    LABEL_COLUMNS = f.columns.tolist()[2:]
+    for col in LABEL_COLUMNS:
+        f[col] = f[col].apply(func)
+    return f
 
