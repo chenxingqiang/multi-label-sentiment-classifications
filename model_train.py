@@ -107,16 +107,14 @@ print("accuracy:", accuracy(predictions, labels, threshold=THRESHOLD))
 print("predictions:", predictions.shape)
 print("labels:", labels.shape)
 print("AUROC per tag")
+
 for i, name in enumerate(LABEL_COLUMNS_ALL):
     tag_auroc = auroc(predictions[:, i], labels[:, i], pos_label=1)
     print(f"{name}: {tag_auroc}")
 
-
 y_pred = predictions.numpy()
 y_true = labels.numpy()
-
 upper, lower = 1, 0
-
 y_pred = np.where(y_pred > THRESHOLD, upper, lower)
 
 print(classification_report(
