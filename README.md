@@ -1,6 +1,6 @@
 
 |tag-name|class|accuracy|
-|----|----|----|
+|----|----:|:----|
 |location_traffic_convenience|-2|0.9779578447341919|
 |location_traffic_convenience|-1|0.9644047021865845|
 |location_traffic_convenience|0|0.8011305332183838|
